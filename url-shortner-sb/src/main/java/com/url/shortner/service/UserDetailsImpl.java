@@ -30,7 +30,7 @@ public class UserDetailsImpl implements UserDetails {
     }
 
     public static UserDetailsImpl build(User user) {
-        //spring needs this for understanding the user role
+        //spring needs this for object to understanding the user role
         GrantedAuthority authority = new SimpleGrantedAuthority(user.getRole());
         return new UserDetailsImpl(
                 user.getId(),
